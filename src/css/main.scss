@@ -1,0 +1,302 @@
+@import "mq";
+//photo essay
+
+[data-photo-essay="isPhotoEssay"] {
+  .content__article-body {
+  .element--lab-atom{
+    display: none !important;
+  }
+
+  figcaption {
+    display: none !important;
+  }
+
+  .inline-expand-image {
+    display: none !important;
+  }
+
+	blockquote.quoted {
+		color: #005689;
+		font-family: "Guardian Egyptian Web", "Guardian Text Egyptian Web", Georgia, serif !important;
+		font-size: 28px;
+		line-height: 32px;
+		font-style: normal;
+
+		.inline-quote{
+			fill: #e31f26;
+		}
+
+		@include mq($until: mobileLandscape) {
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+
+  .element-image:nth-child(even) {
+    &:not(.element--immersive):not(.element--supporting):not(.element--thumbnail):not(.element--showcase){
+      width: 300px;
+      float: right;
+      margin-left: 20px;
+			margin-bottom: 12px;
+
+      @include mq($until: mobileLandscape) {
+        float: none;
+        margin-left: 0px;
+				width: 100%;
+      }
+    }
+  }
+
+  p{
+    clear: both;
+  }
+
+  .element-image{
+    &:not(.element--immersive):not(.element--supporting):not(.element--thumbnail):not(.element--showcase){
+      margin-top: 6px;
+
+			& + blockquote.quoted{
+				clear: both;
+			}
+
+			& + .element-image:not(.element--immersive):not(.element--supporting):not(.element--thumbnail):not(.element--showcase) + .element--immersive{
+				width: 100%;
+				margin-left: 0px !important;
+				margin-right: 0px !important;
+			}
+
+    }
+
+    &.element--showcase + aside.element-pullquote{
+      margin-top: -209px;
+      margin-left: -239px;
+      position: relative;
+      width: 53.7rem;
+      padding-left: 238px;
+      padding-right: 80px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding-top: 20px;
+      padding-bottom: 16px;
+
+      @include mq($until: wide) {
+        margin-left: -159px;
+        width: 48.7rem;
+        padding: 20px 80px 16px 161px;
+      }
+
+      @include mq($until: leftCol) {
+        margin-top: -205px;
+        margin-left: 1px;
+        width: 38.7rem;
+        padding: 20px 80px 16px 15px;
+      }
+
+      @include mq($until:tablet) {
+        margin: 0 0 0 0;
+        width: 100%;
+        padding: 0 0 0 0;
+        background-color: transparent;
+        -webkit-clip-path: none;
+        clip-path: none;
+      }
+
+      .inline-tone-fill{
+        fill:white;
+
+				&.closing{
+					display: none;
+				}
+
+        @include mq($until: tablet) {
+          fill:#005689;
+        }
+      }
+
+      blockquote{
+        p{
+          font-family: "Guardian Egyptian Web", "Guardian Text Egyptian Web", Georgia, serif !important;
+          font-size: 28px;
+          line-height: 32px;
+          font-weight: 200;
+          color: white !important;
+
+          @include mq($until: mobileLandscape) {
+            color: #333333 !important;
+          }
+        }
+      }
+    }
+  }
+
+	.element--immersive + .element--immersive, blockquote.quoted + .element--showcase {
+		width: 100%;
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+
+	.element--immersive + .element--immersive + ul {
+
+	}
+
+  .element--immersive + ul, .element--showcase + ul {
+    width: 150px;
+    margin-left: -170px;
+    float: left;
+
+    & > li {
+      width: 100%;
+    }
+
+    @include mq($until: leftCol) {
+      width:100%;
+      margin-left: 0px;
+			float: none;
+    }
+
+    @include mq($until: mobileLandscape) {
+      width: 98%;
+      float: none;
+      margin-left: 0px;
+    }
+  }
+
+  ul{
+    display: inline-block;
+    margin-top: -7px;
+    width: 100%;
+    @include mq($until: mobileLandscape) {
+      margin-top: -0.2em;
+    }
+  }
+
+  ul > li {
+    color: #005689;
+    font-family: Guardian Text Sans Web,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+    font-size: 12px;
+    width: 100%;
+    float: left;
+    margin-right: 1%;
+    line-height: 14px;
+    padding-top: 7px;
+    border-top: 1px solid #005689;
+    margin-top: 8px;
+
+    &::before {
+      display: none !important;
+    }
+
+    @include mq($until: mobileLandscape){
+      width:98%;
+    }
+  }
+
+
+  .element-image {
+    .block-share {
+      display: none !important;
+    }
+
+    &:not(.element--immersive):not(.element--supporting):not(.element--thumbnail):not(.element--showcase) {
+      width: 300px;
+      float: left;
+
+			@include mq($until: mobileLandscape) {
+				width: 100%;
+			}
+    }
+
+    &.element--immersive {
+      margin-left: -16.25rem;
+      margin-right: -26.4rem;
+
+      @include mq($until: wide) {
+        margin-left: -11.25rem;
+        margin-right: -21.3rem;
+      }
+
+      @include mq($until: leftCol) {
+        margin-left: -1.25rem;
+      }
+
+      @include mq($until: desktop) {
+        margin-right:-6.25rem;
+      }
+
+      @include mq($until: mobileLandscape) {
+        margin-left: -1rem;
+        margin-right: -1rem;
+      }
+
+      .inline-expand-image {
+        display: none;
+      }
+
+      h2{
+        &.section-title {
+          font-size: 40px !important;
+          color: white;
+          font-weight: 200 !important;
+
+          @include mq($until: mobileLandscape) {
+            font-size: 24px !important;
+            line-height: 26px !important;
+          }
+        }
+      }
+
+      .section-title {
+        position: absolute;
+        z-index: 3000;
+        background-color: rgba(0,0,0,0.6);
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(#000000));
+        background: -webkit-linear-gradient(rgba(0,0,0,0), #000000);
+        background: linear-gradient(rgba(0,0,0,0), #000000);
+        padding-bottom: 36px;
+        bottom: -0.1%;
+        padding-left: 20%;
+        padding-right: 35%;
+        width: 45%;
+        line-height: 36px !important;
+        padding-top: 0px;
+
+        @include mq($until: wide) {
+          padding-left: 15.5%;
+          width: 49.5%;
+        }
+
+        @include mq($until: leftCol) {
+          padding-left: 2%;
+          width: 63%;
+        }
+
+        @include mq($until: mobileLandscape) {
+          -webkit-clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+          width:92%;
+          padding-left: 4%;
+          padding-right: 4%;
+          padding-top: 0px;
+          padding-bottom: 12px;
+        }
+
+        &:before{
+          display: block;
+          content: '';
+          width: 100px;
+          margin-bottom: 12px;
+          height: 20px;
+          background-color: #e31f26;
+        }
+      }
+
+      figcaption {
+        position: absolute;
+      }
+
+      .block-share {
+        display: none !important;
+      }
+    }
+  }
+}
+}
